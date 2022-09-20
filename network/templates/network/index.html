@@ -1,0 +1,49 @@
+{% extends "network/layout.html" %}
+
+{% load static %}
+
+{% block script %}
+    <script type="module" src="{% static 'network/index.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
+{% endblock %}
+
+{% block body %}
+
+    <form id="edit_post_form">
+        <div class="form-group">
+            <input type="text" class="form-control" id="edit_post_text">
+            <input type="submit" class="btn btn-outline-primary btn-sm mt-2" value="Save">
+        </div>
+    </form>
+
+    <div id="all_posts_view">
+        <h1> All Posts </h1>
+        <form id = "new_post" class = "p-3 bg-light">
+            {{ post_form }}
+            <input type="submit" class="btn btn-primary mt-2" value="Post">
+        </form>
+    </div>
+
+    <div id="following_view">
+    </div>
+
+    <div id="profile_view">
+        <div class="d-flex align-items-center flex-column">
+            <h1 id="profile_name"> </h1>
+            <h6> Following: <span id="following_count"> </span> </h6>
+            <h6> Followers: <span id="followers_count"> <span> </h6>
+            <button type="button" class="btn btn-outline-primary mt-2" id="follow_button"> </button>
+        <div>
+    </div>
+
+
+    {% comment %} <div class="pagination justify-content-center">
+        {% if page.has_previous %}
+            <a href="{% url 'index'%}?all_posts/page={{page.previous_page_number}}"> Previous Page </a>
+        {% endif %}
+        {% if page.has_next %}
+            <a href="{% url 'index'%}?all_posts/page={{page.next_page_number}}"> Next Page </a>
+        {% endif %}
+    </div> {% endcomment %}
+{% endblock %}
