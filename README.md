@@ -10,5 +10,10 @@ A Twitter-like social network website for publishing posts and following users.
 * Edit Post: Users can click an “Edit” button on any of their own posts to edit that post.
 * Like/Unlike: Users are able to click a button on any post to toggle whether or not they “like” that post.
 
-## what I learned
-* 
+## What I learned
+* Use Javascript to manipulate the HTML DOM content
+* Development of single page web applications using Javascript
+* Working with JSON APIs
+* Use Django to create the backend of a website
+* Manage a SQLite database using Django 
+* Use Bootstrap to create a front end for a website
